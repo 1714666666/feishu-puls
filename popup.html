@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书Plus</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="icons/icon-48.png" alt="飞书Plus" class="logo">
+            <h1>飞书Plus</h1>
+        </div>
+
+        <div class="status-section">
+            <div class="status-indicator">
+                <span class="status-dot" id="statusDot"></span>
+                <span class="status-text" id="statusText">检测中...</span>
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <div class="control-item">
+                <label class="switch">
+                    <input type="checkbox" id="enableToggle" checked>
+                    <span class="slider"></span>
+                </label>
+                <span class="control-label">启用复制解锁</span>
+            </div>
+
+            <div class="control-item">
+                <label class="switch">
+                    <input type="checkbox" id="formatToggle" checked>
+                    <span class="slider"></span>
+                </label>
+                <span class="control-label">保持格式</span>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <p class="info-text">
+                在飞书文档页面自动解除复制限制，支持格式保持。
+            </p>
+        </div>
+
+        <div class="footer">
+            <button id="authorBtn" class="btn-primary">点击跳转到作者博客</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "飞书Plus",
+    "version": "1.0.2",
+    "description": "解除飞书文档复制限制，支持格式复制",
+    "permissions": [
+        "activeTab",
+        "clipboardWrite",
+        "storage",
+        "notifications",
+        "tabs",
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://*.feishu.cn/*",
+        "*://*.larksuite.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.feishu.cn/*",
+                "*://*.larksuite.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
